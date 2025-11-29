@@ -6,6 +6,9 @@ const angular = require('angular-eslint');
 
 module.exports = defineConfig([
 	{
+		ignores: ['**/*.html', 'node_modules/**', 'dist/**', '.angular/**'],
+	},
+	{
 		files: ['**/*.ts'],
 		extends: [
 			eslint.configs.recommended,
@@ -32,17 +35,5 @@ module.exports = defineConfig([
 				},
 			],
 		},
-	},
-	{
-		files: ['**/*.html'],
-		extends: [
-			angular.configs.templateRecommended,
-			angular.configs.templateAccessibility,
-			eslint.configs.recommended,
-			tseslint.configs.recommended,
-			tseslint.configs.stylistic,
-			angular.configs.tsRecommended,
-		],
-		rules: {},
 	},
 ]);
