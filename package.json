@@ -8,16 +8,16 @@
 		"watch": "ng build --watch --configuration development",
 		"test": "ng test",
 		"serve:ssr:portfolio": "node dist/portfolio/server/server.mjs",
-		"lint": "ng lint"
+		"lint": "ng lint",
+		"format": "prettier --write \"**/*.{ts,js,html,scss,css,json}\"",
+		"format:check": "prettier --check \"**/*.{ts,js,html,scss,css,json}\""
 	},
 	"prettier": {
 		"useTabs": true,
 		"tabWidth": 4,
-		"printWidth": 120,
+		"printWidth": 80,
 		"singleQuote": true,
 		"trailingComma": "es5",
-		"bracketSpacing": true,
-		"arrowParens": "always",
 		"htmlWhitespaceSensitivity": "ignore",
 		"singleAttributePerLine": false,
 		"overrides": [
